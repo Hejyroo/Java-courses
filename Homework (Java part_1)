@@ -1,4 +1,8 @@
 //Calculation of the Final Product Price Including VAT
+package org.example;
+
+import java.util.Scanner;
+
 public class App {
 
     static Scanner scanner = new Scanner(System.in);
@@ -13,5 +17,26 @@ public class App {
 
         System.out.println("The price of a product without VAT: $ " + priceWithoutVAT);
         System.out.println("The price of a product with VAT: $ " + priceWithVAT);
+    }
+}
+// Average Temperature Calculation
+package org.example;
+
+import java.util.Scanner;
+
+public class Task {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        float SumOfTemp= 0;
+        for (int i = 0; i < 5 ; i++) {
+            System.out.println("Enter the temperature for today");
+            float TemperatureOfTheDay= scanner.nextFloat();
+            SumOfTemp= SumOfTemp + TemperatureOfTheDay;
+            //SumOfTemp will change every time user enters new value for example Sum=0+10; next day will be Sum=10+10
+        }
+        float AverageTemp= SumOfTemp/5;
+        System.out.println("The average temperature of these days is: " + AverageTemp);
+
     }
 }
