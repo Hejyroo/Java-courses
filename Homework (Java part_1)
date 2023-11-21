@@ -1,2 +1,17 @@
 //Calculation of the Final Product Price Including VAT
+public class App {
 
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+    //ask user for the price
+        System.out.println("Enter the price of the product excluding VAT: ");
+        //
+        double priceWithoutVAT = scanner.nextDouble();
+        double VAT = 0.20;
+        double priceWithVAT = priceWithoutVAT * (1 + VAT);
+
+        System.out.println("The price of a product without VAT: $ " + priceWithoutVAT);
+        System.out.println("The price of a product with VAT: $ " + priceWithVAT);
+    }
+}
