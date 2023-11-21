@@ -40,3 +40,36 @@ public class Task {
 
     }
 }
+//Counting Vowels in a String
+public class Task3 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter string");
+        String text = scanner.nextLine();
+        text = text.toLowerCase();
+        int numberOfVowels = 0;
+        for (int i = 0; i < text.length() ; i++) {
+            char symbol= text.charAt(i);
+            if ( symbol =='a'){
+                numberOfVowels= numberOfVowels +1;
+            }
+            if ( symbol =='e'){
+                numberOfVowels= numberOfVowels +1;
+            }
+            if ( symbol =='u'){
+                numberOfVowels= numberOfVowels +1;
+            }
+            if ( symbol =='o'){
+                numberOfVowels= numberOfVowels +1;
+            }
+            if ( symbol =='i'){
+                numberOfVowels= numberOfVowels +1;
+            }
+            if ( symbol =='y'){
+                numberOfVowels= numberOfVowels +1;
+            }
+        }
+        System.out.println( "The number of the vowels:" + numberOfVowels);
+    }
+}
