@@ -73,3 +73,23 @@ public class Task3 {
         System.out.println( "The number of the vowels:" + numberOfVowels);
     }
 }
+// Even or Odd Number Checker
+public class Task4 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Enter the number");
+        int number =scanner.nextInt();
+        boolean isEven;
+        if ((number % 2) == 0)
+        {
+            isEven = true;
+            System.out.println("The number is even");
+        }
+        else
+        {
+            isEven = false;
+            System.out.println("The number is odd");
+        }
+    }
+}
