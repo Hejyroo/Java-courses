@@ -152,3 +152,26 @@ public class Task6 {
     }
 }
 //Interest Calculator
+public class Task7 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static double budgetCalculation( double P, double r, int t) {
+        return P * Math.pow(1 + r, t);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Enter amount of the initial deposit");
+        double initialDepositAmount = scanner.nextDouble();
+
+        System.out.println("Enter annual interest rate");
+        double annualInterestRate = scanner.nextDouble();
+
+        System.out.println("Enter number of years");
+        int numberOfYears = scanner.nextInt();
+
+        for (int i = 1; i <= numberOfYears; i++) {
+            double A = budgetCalculation(initialDepositAmount, annualInterestRate, i);
+            System.out.println("Final amount of deposit for " + i + " year is " + A);
+        }
+    }
+}
