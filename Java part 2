@@ -1,0 +1,31 @@
+package org.example;
+
+public class JavaPart2 {
+    public static boolean areStringsEqual(String str1, String str2, boolean caseSensitive) {
+        if (caseSensitive) {
+            return str1.equals(str2);
+        } else {
+            return str1.equalsIgnoreCase(str2);
+        }
+    }
+
+    public static String getSubstringBetweenIndices(String str, int startIndex, int endIndex) {
+        return str.substring(startIndex, endIndex + 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Demonstrate Task 1");
+        String s1 = "Test";
+        String s2 = "test";
+        System.out.println(areStringsEqual(s1, s2, true));
+        System.out.println(areStringsEqual(s1, s2, false));
+
+        System.out.println("Demonstrate Task 2");
+        String originalString = "Test program";
+        int startIndex = 2;
+        int endIndex = 5;
+        System.out.println(getSubstringBetweenIndices(originalString, startIndex, endIndex));
+
+    }
+}
+
