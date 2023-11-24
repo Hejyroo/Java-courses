@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class JavaPart2 {
     public static boolean areStringsEqual(String str1, String str2, boolean caseSensitive) {
         if (caseSensitive) {
@@ -13,6 +15,16 @@ public class JavaPart2 {
         return str.substring(startIndex, endIndex + 1);
     }
 
+    public static boolean containDigits(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isDigit(text.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     public static void main(String[] args) {
         System.out.println("Demonstrate Task 1");
         String s1 = "Test";
@@ -25,6 +37,14 @@ public class JavaPart2 {
         int startIndex = 2;
         int endIndex = 5;
         System.out.println(getSubstringBetweenIndices(originalString, startIndex, endIndex));
+
+        System.out.println("Demonstrate Task 5");
+        String s5 = "Test2123hgfd";
+        boolean hasDigit = containDigits(s5);
+        System.out.println("Text (" + s5 + ") has degits? " + hasDigit);
+
+        System.out.println("Demonstrate Task 4");
+
 
     }
 }
