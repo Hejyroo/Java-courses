@@ -23,7 +23,11 @@ public class JavaPart2 {
         }
         return false;
     }
+    public static String removeAllLeadingAndTrailingSpaces(String text){
+        String withoutspaces = text.trim();
+        return withoutspaces;
 
+    }
 
     public static void main(String[] args) {
         System.out.println("Demonstrate Task 1");
@@ -43,7 +47,10 @@ public class JavaPart2 {
         boolean hasDigit = containDigits(s5);
         System.out.println("Text (" + s5 + ") has degits? " + hasDigit);
 
-        System.out.println("Demonstrate Task 4");
+        System.out.println("Demonstrate Task 6");
+        String test_text = " Text should be without spaces                  ";
+        String s6 = removeAllLeadingAndTrailingSpaces (test_text);
+        System.out.println("This text doesn't have leading and trailing spaces:" + s6 + ".");
 
 
     }
