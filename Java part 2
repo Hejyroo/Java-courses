@@ -28,6 +28,11 @@ public class JavaPart2 {
         return withoutspaces;
 
     }
+    public static String[]  splitString( String text, String delimiter){
+        String[] splitText = text.split(delimiter);
+        return splitText;
+
+    }
 
     public static void main(String[] args) {
         System.out.println("Demonstrate Task 1");
@@ -52,7 +57,13 @@ public class JavaPart2 {
         String s6 = removeAllLeadingAndTrailingSpaces (test_text);
         System.out.println("This text doesn't have leading and trailing spaces:" + s6 + ".");
 
-
-    }
+        System.out.println( "Demonstrate Task 7");
+        String text= "Creating,reports,on,the,defects,found ";
+        String delimiter = ",";
+        String[] result= splitString(text, delimiter);
+        System.out.println("Print the result");
+        for (String substring : result) {
+            System.out.println(substring);}
+  }
 }
 
