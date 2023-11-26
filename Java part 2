@@ -135,3 +135,46 @@ public class Rectangle {
         System.out.println("Diagonal: " + testRectangle.getDiagonal());
     }
 }
+//Task 3 Analysis of a Collection of Numbers
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Java2Task3 {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            numbers.add(random.nextInt(100) + 1);
+        }
+
+
+        System.out.println("Show all elements:");
+        System.out.println(numbers);
+
+
+        int min = Collections.min(numbers);
+        int max = Collections.max(numbers);
+        System.out.println("\nMinimum: " + min + ", Maximum: " + max);
+
+
+        double average = numbers.stream().mapToInt(Integer::intValue).average().orElse(0);
+        System.out.println("\nAverage: " + average);
+
+       
+        numbers.removeIf(n -> n % 2 == 0);
+        System.out.println("\nWithout even numbers:");
+        System.out.println(numbers);
+        
+        int targetNumber = 50;
+        boolean containsNumber = numbers.contains(targetNumber);
+        System.out.println("\nThere is " + targetNumber + "? " + containsNumber);
+
+
+        Collections.sort(numbers);
+        System.out.println("\nSorted array:");
+        System.out.println(numbers);
+    }
+}
