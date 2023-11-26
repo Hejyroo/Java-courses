@@ -67,4 +67,71 @@ public class JavaPart2 {
             System.out.println(substring);}
   }
 }
+//Task 2
+package org.example;
 
+import java.lang.Math;
+
+public class Rectangle {
+    private double width;
+    private double height;
+    private final double angle = 90.0;
+    public Rectangle() {
+        this.width = 0.0;
+        this.height = 0.0;
+    }
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
+
+    public double calculateArea() {
+        return width * height;
+    }
+
+    public double calculatePerimeter() {
+        return 2 * (width + height);
+    }
+
+    public double getDiagonal() {
+        return Math.sqrt(width * width + height * height);
+    }
+    public static void main(String[] args) {
+        
+        Rectangle defaultRectangle = new Rectangle();
+        System.out.println("Default Rectangle - Width: " + defaultRectangle.getWidth() +
+                ", Height: " + defaultRectangle.getHeight() +
+                ", Angle: " + defaultRectangle.getAngle());
+
+
+        Rectangle testRectangle = new Rectangle(5.0, 7.0);
+        System.out.println("Test Rectangle - Width: " + testRectangle.getWidth() +
+                ", Height: " + testRectangle.getHeight() +
+                ", Angle: " + testRectangle.getAngle());
+
+        System.out.println("Area: " + testRectangle.calculateArea());
+        System.out.println("Perimeter: " + testRectangle.calculatePerimeter());
+        System.out.println("Diagonal: " + testRectangle.getDiagonal());
+    }
+}
