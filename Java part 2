@@ -178,3 +178,196 @@ public class Java2Task3 {
         System.out.println(numbers);
     }
 }
+# Task 4. Operations with a Book Collection.
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Book {
+    private String title;
+    private String author;
+    private String genre;
+    private int year;
+
+    public Book(String title, String author, String genre, int year) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.year = year;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+}
+
+public class BookCollection {
+    public List<Book> books;
+
+    public BookCollection() {
+        this.books = new ArrayList<>();
+    }
+
+    public void printListOfAuthors() {
+        for (Book book : books) {
+            System.out.println(book.getAuthor());
+        }
+    }
+
+    public void listAuthorsByGenre(String genre) {
+        for (Book book : books) {
+            if (book.getGenre().equalsIgnoreCase(genre)) {
+                System.out.println(book.getAuthor());
+            }
+        }
+    }
+
+    public void listAuthorsByPublicationYear(int year) {
+        for (Book book : books) {
+            if (book.getYear() == year) {
+                System.out.println(book.getAuthor());
+            }
+        }
+    }
+
+    public Book findBookByAuthor(String author) {
+        for (Book book : books) {
+            if (book.getAuthor().equalsIgnoreCase(author)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public List<Book> findBooksByPublicationYear(int year) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getYear() == year) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
+
+    public List<Book> findBooksByGenre(String genre) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getGenre().equalsIgnoreCase(genre)) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
+
+    public void removeBooksByAuthor(String author) {
+        books.removeIf(book -> book.getAuthor().equalsIgnoreCase(author));
+    }
+
+    public void sortCollection(Comparator<Book> comparator) {
+        Collections.sort(books, comparator);
+    }
+
+    public void mergeBookCollections(BookCollection otherCollection) {
+        this.books.addAll(otherCollection.books);
+    }
+
+    public List<Book> subcollectionOfBooksByGenre(String genre) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getGenre().equalsIgnoreCase(genre)) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
+}
+
+public class Java2Task4 {
+    public static void main(String[] args) {
+        BookCollection collection = new BookCollection();
+        collection.books.add(new Book("Book1", "Author1", "Genre1", 2000));
+        collection.books.add(new Book("Book2", "Author2", "Genre2", 2005));
+        collection.books.add(new Book("Book3", "Author1", "Genre3", 2010));
+
+        System.out.println("List of Authors:");
+        collection.printListOfAuthors();
+
+        System.out.println("\nList of Authors in Genre2:");
+        collection.listAuthorsByGenre("Genre2");
+
+        System.out.println("\nList of Authors in 2010:");
+        collection.listAuthorsByPublicationYear(2010);
+
+        System.out.println("\nFind Book by Author 'Author2':");
+        Book bookByAuthor = collection.findBookByAuthor("Author2");
+        if (bookByAuthor != null) {
+            System.out.println("Found: " + bookByAuthor.getTitle());
+        } else {
+            System.out.println("Book not found.");
+        }
+
+        System.out.println("\nFind Books in 2005:");
+        List<Book> booksIn2005 = collection.findBooksByPublicationYear(2005);
+        for (Book book : booksIn2005) {
+            System.out.println(book.getTitle());
+        }
+
+        System.out.println("\nFind Books in Genre 'Genre3':");
+        List<Book> booksInGenre3 = collection.findBooksByGenre("Genre3");
+        for (Book book : booksInGenre3) {
+            System.out.println(book.getTitle());
+        }
+
+        System.out.println("\nRemove Books by Author 'Author1':");
+        collection.removeBooksByAuthor("Author1");
+        collection.printListOfAuthors();
+
+        System.out.println("\nMerge Book Collections:");
+        BookCollection otherCollection = new BookCollection();
+        otherCollection.books.add(new Book("Book4", "Author3", "Genre4", 2015));
+        otherCollection.books.add(new Book("ABook5", "Author4", "Genre2", 2020));
+        collection.mergeBookCollections(otherCollection);
+        collection.printListOfAuthors();
+
+        System.out.println("\nSort Collection by Title:");
+        collection.sortCollection(Comparator.comparing(Book::getTitle));
+        collection.printListOfAuthors();
+
+        System.out.println("\nSubcollection of Books in Genre 'Genre2':");
+        List<Book> subcollection = collection.subcollectionOfBooksByGenre("Genre2");
+        for (Book book : subcollection) {
+            System.out.println(book.getTitle());
+        }
+    }
+}
