@@ -1,1 +1,27 @@
+//Task 2 (
+package org.example;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Comparator;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class Java2Task4Test {
+
+    @Test
+    void testJava2Task4() {
+        BookCollection collection = new BookCollection();
+        collection.books.add(new Book("Book1", "Author1", "Genre1", 2000));
+        collection.books.add(new Book("Book2", "Author2", "Genre2", 2005));
+        collection.books.add(new Book("Book3", "Author1", "Genre3", 2010));
+
+
+        collection.printListOfAuthors();
+
+       
+        System.out.println("\nList of Authors in Genre2:");
+        collection.listAuthorsByGenre("Genre2");
+    }
+}
