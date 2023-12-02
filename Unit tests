@@ -1,4 +1,3 @@
-//Task 2 (start to write the unit tests)
 package org.example;
 
 import org.junit.jupiter.api.Test;
@@ -17,11 +16,46 @@ class Java2Task4Test {
         collection.books.add(new Book("Book2", "Author2", "Genre2", 2005));
         collection.books.add(new Book("Book3", "Author1", "Genre3", 2010));
 
+        // Test findBookByAuthor
+        System.out.println("\nFind Book by Author 'Author2':");
+        Book bookByAuthor = collection.findBookByAuthor("Author2");
+        assertNotNull(bookByAuthor);
+        assertEquals("Book2", bookByAuthor.getTitle());
 
-        collection.printListOfAuthors();
+        // Test findBooksByPublicationYear
+        System.out.println("\nFind Books in 2005:");
+        List<Book> booksIn2005 = collection.findBooksByPublicationYear(2005);
+        assertEquals(1, booksIn2005.size());
+        assertEquals("Book2", booksIn2005.get(0).getTitle());
 
-       
-        System.out.println("\nList of Authors in Genre2:");
-        collection.listAuthorsByGenre("Genre2");
+        // Test findBooksByGenre
+        System.out.println("\nFind Books in Genre 'Genre3':");
+        List<Book> booksInGenre3 = collection.findBooksByGenre("Genre3");
+        assertEquals(1, booksInGenre3.size());
+        assertEquals("Book3", booksInGenre3.get(0).getTitle());
+
+        // Test removeBooksByAuthor
+        System.out.println("\nRemove Books by Author 'Author1':");
+        collection.removeBooksByAuthor("Author1");
+        assertEquals(1, collection.books.size());
+        assertEquals("Book2", collection.books.get(0).getTitle());
+
+        // Test mergeBookCollections
+        System.out.println("\nMerge Book Collections:");
+        BookCollection otherCollection = new BookCollection();
+        otherCollection.books.add(new Book("Book4", "Author3", "Genre4", 2015));
+        otherCollection.books.add(new Book("ABook5", "Author4", "Genre2", 2020));
+        collection.mergeBookCollections(otherCollection);
+        assertEquals(3, collection.books.size());
+        assertEquals("Book4", collection.books.get(2).getTitle());
+
+    
+
+        // Test subcollectionOfBooksByGenre
+        System.out.println("\nSubcollection of Books in Genre 'Genre2':");
+        List<Book> subcollection = collection.subcollectionOfBooksByGenre("Genre2");
+        assertEquals(1, subcollection.size());
+        assertEquals("ABook5", subcollection.get(0).getTitle());
     }
 }
+
