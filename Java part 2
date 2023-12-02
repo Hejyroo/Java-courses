@@ -312,10 +312,6 @@ public class BookCollection {
         books.removeIf(book -> book.getAuthor().equalsIgnoreCase(author));
     }
 
-    public void sortCollection(Comparator<Book> comparator) {
-        Collections.sort(books, comparator);
-    }
-
     public void mergeBookCollections(BookCollection otherCollection) {
         this.books.addAll(otherCollection.books);
     }
@@ -376,10 +372,6 @@ public class Java2Task4 {
         otherCollection.books.add(new Book("Book4", "Author3", "Genre4", 2015));
         otherCollection.books.add(new Book("ABook5", "Author4", "Genre2", 2020));
         collection.mergeBookCollections(otherCollection);
-        collection.printListOfAuthors();
-
-        System.out.println("\nSort Collection by Title:");
-        collection.sortCollection(Comparator.comparing(Book::getTitle));
         collection.printListOfAuthors();
 
         System.out.println("\nSubcollection of Books in Genre 'Genre2':");
