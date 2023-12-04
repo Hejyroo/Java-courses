@@ -1,6 +1,69 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+class TestTask3 {
+    @Test
+    public void TestfindMinimum() {
+        assertEquals(20, Java2Task3Methods.findMinimum(getnumbers()));
+    }
+
+    @Test
+    public void TestfindMaximum() {
+        assertEquals(39, Java2Task3Methods.findMaximum(getnumbers()));
+    }
+
+    @Test
+    public void TestcalculateAverage() {
+        assertEquals(20, Java2Task3Methods.calculateAverage(getaverage()));
+
+    }
+    @ParameterizedTest
+    @MethodSource("arrayContainsNumbers")
+    void testArrayContainsNumbers( int[] array, int number){
+        assertTrue(arrayContainsNumbers(array, number), "Array should contain the number");
+    }
+
+
+    private ArrayList<Integer> getnumbers() {
+        ArrayList<Integer> numbers = new ArrayList<>();//масив
+        for (int i = 20; i < 40; i++) {
+            numbers.add(i);
+        }
+        return numbers;
+    }
+
+    private ArrayList<Integer> getaverage() {
+        ArrayList<Integer> numb = new ArrayList<>();
+        numb.add(10);
+        numb.add(20);
+        numb.add(30);
+        return numb;
+    }
+    private static boolean arrayContainsNumbers( int[] array, int number){
+        for (int num: array){
+            if (num ==number) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private static Object[][] arrayContainsNumbers(){
+        return new Object[][]{
+                {new int[]{1,2,3,4}, 3}
+        };
+    }
+}
+// Unit yesys for task 4 from homework Java part 2
+package org.example;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.List;
