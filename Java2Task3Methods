@@ -1,0 +1,87 @@
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Java2Task3Methods {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = generateRandomNumbers(20);
+
+        displayAllElements(numbers);
+
+        int minNum = findMinimum(numbers);
+        int maxNum = findMaximum(numbers);
+        System.out.println("Minimum: " + minNum + "; Maximum: " + maxNum);
+        
+
+        double average = calculateAverage(numbers);
+        System.out.println("\nAverage: " + average);
+
+        removeEvenNumbers(numbers);
+        System.out.println("\nWithout even numbers:");
+        displayAllElements(numbers);
+
+        int targetNumber = 50;
+        boolean containsNumber = containsNumber(numbers, targetNumber);
+        System.out.println("\nDoes the list contain " + targetNumber + "? " + containsNumber);
+
+        sortNumbers(numbers);
+        System.out.println("\nSorted array:");
+        displayAllElements(numbers);
+    }
+
+    public static ArrayList<Integer> generateRandomNumbers(int count) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < count; i++) {
+            numbers.add(random.nextInt(100));
+        }
+        return numbers;
+    }
+
+    public static void displayAllElements(ArrayList<Integer> numbers) {
+        System.out.println("Show all elements:");
+        System.out.println(numbers);
+    }
+
+    public static int findMinimum(ArrayList<Integer> numbers) {
+        int minNum = numbers.get(0);
+        for (int i = 1; i < numbers.size(); i++) {
+            if (numbers.get(i) < minNum) {
+                minNum = numbers.get(i);
+            }
+        }
+        return minNum;
+    }
+
+    public static int findMaximum(ArrayList<Integer> numbers) {
+        int maxNum = numbers.get(0);
+        for (int i = 1; i < numbers.size(); i++) {
+            if (numbers.get(i) > maxNum) {
+                maxNum = numbers.get(i);
+            }
+        }
+        return maxNum;
+    }
+
+    public static double calculateAverage(ArrayList<Integer> numbers) {
+        double sum = 0;
+        for (Integer number : numbers) {
+            sum += number;
+        }
+        return sum / numbers.size();
+    }
+
+    public static void removeEvenNumbers(ArrayList<Integer> numbers) {
+        numbers.removeIf(a -> a % 2 == 0);
+    }
+
+    public static boolean containsNumber(ArrayList<Integer> numbers, int targetNumber) {
+        return numbers.contains(targetNumber);
+    }
+
+    public static void sortNumbers(ArrayList<Integer> numbers) {
+        Collections.sort(numbers);
+    }
+}
