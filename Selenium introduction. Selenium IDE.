@@ -44,7 +44,7 @@
         ["xpath=//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-in/form/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "uliakopka@gmail.com"
+      "value": "pmykhalevych07@gmail.com"
     }, {
       "id": "c1c60a4d-8b61-4519-9e8f-7d22495d0eab",
       "comment": "",
@@ -58,7 +58,7 @@
         ["xpath=//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-in/form/div/input", "xpath:idRelative"],
         ["xpath=//div/input", "xpath:position"]
       ],
-      "value": "Kopka$$$1"
+      "value": "ChTnpz2d4FsLWAa#"
     }, {
       "id": "8b7e0eb6-42fc-435f-80b4-cadfad2378c4",
       "comment": "",
@@ -73,16 +73,16 @@
       ],
       "value": ""
     }, {
+      "id": "20857976-84cc-4380-b354-c6284fe7e067",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name",
+      "targets": [],
+      "value": "1000"
+    }, {
       "id": "2a71ae17-12e9-4423-91f1-7adf11bb44e0",
       "comment": "",
       "command": "click",
-      "target": "css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "eba80019-0a6d-4eeb-907e-08e864c6ce6c",
-      "comment": "",
-      "command": "clickAt",
       "target": "css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name",
       "targets": [],
       "value": ""
@@ -127,7 +127,7 @@
     }, {
       "id": "4c96689b-1504-4580-b844-adbb67d9f433",
       "comment": "",
-      "command": "type",
+      "command": "editContent",
       "target": "css=.comment-textarea",
       "targets": [],
       "value": "${Check}"
@@ -141,10 +141,10 @@
     }, {
       "id": "8f69fe67-bb53-4b29-b25a-c7df0118acd4",
       "comment": "",
-      "command": "type",
+      "command": "editContent",
       "target": "css=.comment-textarea",
       "targets": [],
-      "value": "test the comment"
+      "value": "test the comment "
     }, {
       "id": "536a4847-0525-422d-8f0e-bd6b375ddd4a",
       "comment": "",
@@ -153,18 +153,339 @@
       "targets": [],
       "value": "test the comment"
     }, {
-      "id": "8211a471-6497-458f-a7d6-843b49a7dc65",
+      "id": "963d248b-cb57-4fc0-8366-4d306857f46d",
       "comment": "",
       "command": "clickAt",
       "target": "css=.primary-global-button",
       "targets": [],
       "value": ""
-    }, {
-      "id": "50fc0841-fa27-46e0-9c66-887ac1419c23",
+    }]
+  }, {
+    "id": "cc3aa340-adf0-4ce6-bfd3-38d8499462da",
+    "name": "1",
+    "commands": [{
+      "id": "7ade843b-7713-4c97-b8d9-1dd94f8e1e43",
       "comment": "",
-      "command": "verifyEditable",
-      "target": "css=.primary-global-button",
+      "command": "open",
+      "target": "https://www.greencity.social/#/ubs",
       "targets": [],
+      "value": ""
+    }, {
+      "id": "743c51a1-bcf5-4532-a141-fb9fcc7a08dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8ed7bd5-2975-42b5-a46c-a04ab2df8d4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=app-header:nth-child(1) .ubs-header-sign-in",
+      "targets": [
+        ["css=app-header:nth-child(1) .ubs-header-sign-in", "css:finder"],
+        ["xpath=(//a[contains(text(),'Sign in')])[2]", "xpath:link"],
+        ["xpath=//app-ubs/app-header/header/div[2]/div/div/div/ul/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56f2e368-2055-4894-8e6f-91e265c9d49e",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-in/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "pmykhalevych07@gmail.com"
+    }, {
+      "id": "9e12cea0-509a-4a6e-bd34-fee652d2e4b9",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=form-control password-signin", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-in/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "ChTnpz2d4FsLWAa#"
+    }, {
+      "id": "9b53db94-b420-43d3-8c7b-781e258b0843",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ubsStyle",
+      "targets": [
+        ["css=.ubsStyle", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-in/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "449f0fa3-2737-43b0-8218-86117a823271",
+      "comment": "",
+      "command": "click",
+      "target": "css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name",
+      "targets": [
+        ["css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name", "css:finder"],
+        ["xpath=(//a[contains(text(),'Green City')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#/greenCity')])[2]", "xpath:href"],
+        ["xpath=//app-ubs/app-header/header/div[2]/div/div/nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52db2fb5-3d48-48e4-816f-efc2717caf1c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c31dee62-549c-45f6-a592-1923220434e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-left-list:nth-child(1) > .url-name",
+      "targets": [
+        ["css=.nav-left-list:nth-child(1) > .url-name", "css:finder"],
+        ["xpath=//a[contains(text(),'Eco news')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#/news')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a2944ed-4ea2-4602-b006-0997a30a6ddc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c96fb616-750b-47ce-bb57-384c9bc3a506",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gallery-view-li-active:nth-child(2) h3",
+      "targets": [
+        ["css=.gallery-view-li-active:nth-child(2) h3", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/div[4]/ul/li[2]/app-news-list-gallery-view/div/div/div[2]/div/h3", "xpath:idRelative"],
+        ["xpath=//li[2]/app-news-list-gallery-view/div/div/div[2]/div/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'dvfsgdgdfgdfg11')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e75c916-57e5-478b-98ee-4175e2fc7153",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77614c83-079a-40f6-9788-8028e590bf30",
+      "comment": "",
+      "command": "click",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59bf6e0d-dc38-42ca-86d4-20be1b29cabb",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": "comment&nbsp;"
+    }, {
+      "id": "3f9d1992-ccc1-45fb-be95-9434bd26737d",
+      "comment": "",
+      "command": "click",
+      "target": "css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name",
+      "targets": [
+        ["css=app-header:nth-child(1) .nav-left-list:nth-child(4) > .url-name", "css:finder"],
+        ["xpath=(//a[contains(text(),'Green City')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#/greenCity')])[2]", "xpath:href"],
+        ["xpath=//app-ubs/app-header/header/div[2]/div/div/nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53fcd18c-b92e-4c61-b298-aab99caa9ff7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70bfb46a-8a06-422b-9dc4-64f7f9596385",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-left-list:nth-child(1) > .url-name",
+      "targets": [
+        ["css=.nav-left-list:nth-child(1) > .url-name", "css:finder"],
+        ["xpath=//a[contains(text(),'Eco news')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#/news')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "331d979b-b519-4623-962d-a73b0ec89c28",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72d86ae8-66e2-4a58-ac35-763ed0fc82fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gallery-view-li-active:nth-child(2) .list-gallery-content",
+      "targets": [
+        ["css=.gallery-view-li-active:nth-child(2) .list-gallery-content", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/div[4]/ul/li[2]/app-news-list-gallery-view/div/div", "xpath:idRelative"],
+        ["xpath=//li[2]/app-news-list-gallery-view/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c142f37f-939b-41d1-9fa4-90506ca7e289",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c80dc5e-cca1-4eb7-9714-73ad9a50dca0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba801c8e-f32f-452d-a648-06486d46bfc6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f30956d-4c94-4f6d-97b7-a06971d95b0b",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bc3bbdc-b462-4811-89bd-9a1839d97ddd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aedc9c0d-1a11-4c3b-88e3-ff2b5aa26a73",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": "comment"
+    }, {
+      "id": "08b2daff-9872-40f7-9731-2bbc33da2a9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#main-content > .container",
+      "targets": [
+        ["css=#main-content > .container", "css:finder"],
+        ["xpath=//main[@id='main-content']/div", "xpath:idRelative"],
+        ["xpath=//main/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c57fd394-ccde-4fa1-b396-1e6c3d51c870",
+      "comment": "",
+      "command": "click",
+      "target": "css=app-add-comment",
+      "targets": [
+        ["css=app-add-comment", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment", "xpath:idRelative"],
+        ["xpath=//app-add-comment", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd2d2e47-a7e2-4d1f-8c34-03f85156393c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e14a5955-80ea-4463-a4b7-5cc90cb1d35d",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.comment-textarea",
+      "targets": [
+        ["css=.comment-textarea", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/app-comment-textarea/div/div", "xpath:idRelative"],
+        ["xpath=//app-comment-textarea/div/div", "xpath:position"]
+      ],
+      "value": "comment&nbsp;"
+    }, {
+      "id": "30aa28a8-7dca-4a35-9df3-8f4bca194ccb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.primary-global-button",
+      "targets": [
+        ["css=.primary-global-button", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ed109c4-529f-4e32-9c0f-930e89603410",
+      "comment": "",
+      "command": "click",
+      "target": "css=.primary-global-button",
+      "targets": [
+        ["css=.primary-global-button", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/app-comments-container/app-add-comment/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Comment')]", "xpath:innerText"]
+      ],
       "value": ""
     }]
   }],
